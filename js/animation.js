@@ -23,9 +23,6 @@ function endAnimation(){
   })
   .to(logo, 1,{
     y: "-106px"
-  })
-  .to(document.body, 0.8, {
-    background: "#4A154B"
   }).then(() => {
     gsap.fromTo(slack, {
       opacity: 0
@@ -38,41 +35,29 @@ function endAnimation(){
 
 
 function rotateAnimation(){
-  const logoTl = gsap.timeline({ defaults: {duration: 1, ease: "none"} })
-  logoTl.to(logo, {
-    rotate: "+=180deg",
-    onStart: () => {
-      gsap.to('body', {
-        background: "#BDE8F5"
-      })
-    }
+ 
+  const logoTl = gsap.timeline()
+  logoTl.add("start")
+  .to(logo, 4, {
+    rotate: "+=1080deg",
+    ease:"power2.inOut"
   })
-  .to(logo, {
-    rotate: "+=180deg",
-    onStart: () => {
-      gsap.to('body', {
-        background: "#F1E1BD"
-      })
-    }
-  })
-  .to(logo, {
-    rotate: "+=180deg",
-    onStart: () => {
-      gsap.to('body', {
-        background: "#D0F4E5"
-      })
-    }
-    
-  })
-  .to(logo, 2,{
-    rotate: "+=180deg",
-    ease: "power1.out",
-    onStart: () => {
-      gsap.to('body', {
-        background: "#FE97B7"
-      })
-    }
-  }).then(() => {
+  .to("body", 1, {
+    background: "#BDE8F5"
+  }, "start")
+  .to("body", 1, {
+   background: "#F1E1BD"
+  }, "start+=1")
+  .to("body", 1, {
+    background: "#D0F4E5"
+  }, "start+=2")
+  .to("body", 1, {
+    background: "#FE97B7"
+  }, "start+=3")
+  .to("body", 1, {
+    background: "#4A154B"
+  }, "start+=4")
+  .then(() => {
     endAnimation()
   })
 }
