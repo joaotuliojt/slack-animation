@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #4A154B;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.container #slack {
+  position: absolute;
+  opacity: 0;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-template-rows: 60px 60px;
+  gap: 7px;
+  width: 126px;
+}
+.logo svg {
+  opacity: 0;
+}
+
+.line {
+  background: red;
+  border-radius: 100px;
+}
+
+.line-blue {
+  background: #36C5F0;
+}
+
+.line-green {
+  background: #2EB67D;
+  height: 100;
+}
+
+.line-red {
+  background: #E01E5A;
+}
+
+.line-yellow {
+  background: #ECB22E;
+}
+
+.part-one {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.part-one svg {
+  align-self: flex-end;
+}
+.part-one .line {
+  align-self: flex-end;
+  width: 60px;
+  height: 26px;
+  transform: translateX(-100vw);
+  width: 100vw;
+}
+
+.part-two {
+  display: flex;
+  gap: 7px;
+}
+.part-two svg {
+  align-self: flex-end;
+}
+.part-two .line {
+  align-self: flex-end;
+  height: 100vh;
+  transform: translateY(-100vh);
+  width: 26px;
+}
+
+.part-three {
+  display: flex;
+  gap: 7px;
+}
+.part-three .line {
+  height: 100vh;
+  transform: translateY(100vh);
+  width: 26px;
+}
+
+.part-four {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+.part-four .line {
+  width: 100vw;
+  transform: translateX(100vw);
+  height: 26px;
+}/*# sourceMappingURL=style.css.map */
